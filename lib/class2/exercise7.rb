@@ -30,7 +30,9 @@
 #
 #     'bird'.rjust(10)  #=> '      bird'
 
-puts 'Table of Contents'.center(50)
-puts 'Chapter 1:  Getting Started' + 'page  1'.rjust(23)
-puts 'Chapter 2:  Numbers' + 'page  9'.rjust(31)
-puts 'Chapter 3:  Letters' + 'page 13'.rjust(31)
+width = 50
+puts 'Table of Contents'.center(width)
+puts 'Chapter 1:  Getting Started'.ljust(width / 2) + \
+'page  1'.rjust(width / 2 - 2)
+puts 'Chapter 2:  Numbers'.ljust(width / 2) + 'page  9'.rjust(width / 2)
+puts 'Chapter 3:  Letters'.ljust(width / 2) + 'page 13'.rjust(width / 2)
