@@ -55,3 +55,28 @@
 #
 # Tip #3: Let the `rand` method return a number in a range starting at zero.
 # What can you do to the number `rand` returns to make it at least 1930?
+
+puts 'Nana: HI SWEETIE! GIVE NANA A KISS!'
+answer = gets.chomp
+
+loop do
+  if answer == answer.downcase
+  puts 'Nana: HUH?! SPEAK UP, SWEETIE!'
+  answer = gets.chomp
+  end
+
+  if answer == answer.upcase && answer != 'BYE'
+  year = rand(21) + 1930
+  puts "Nana: NOT SINCE #{year}!"
+  answer = gets.chomp
+  end
+
+  break if answer =='BYE'
+end
+
+puts 'Nana: BYE SWEETIE!'
+
+
+
+
+
