@@ -35,3 +35,14 @@
 #     Returns a new Array created by sorting `array`.
 #
 #     ['cat', 'bird'].sort  #=> ['bird', 'cat']
+
+words = []
+new_words = []
+
+puts "Enter some awesome words and I'll sort them for you!"
+
+while gets != ""
+  words.push gets
+end
+
+puts words
