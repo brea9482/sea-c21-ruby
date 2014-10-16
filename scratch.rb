@@ -2,27 +2,17 @@
 # - Mark Twain
 
 
-bottles = 3
-word = 'bottles'
+array = ['Can I Kick it?','A Tribe Called Quest','1991','Rump Shaker',\
+         'Wreckx-n-Effect','1992','Check Yo Self','Ice Cube','1993',\
+         'Regulate','Warren G & Nate Dogg','1994','I got 5 On It','Luniz',\
+         '1995','Ready Or Not','The Fugeed','1996']
 
-loop do
-  puts "#{bottles} #{word} of beer on the wall, #{bottles} #{word} of beer!"
 
-  bottles -= 1
+i = 0
+width = 50
 
-  bottles = 'no more' if bottles == 0
+while i < array.size
+puts array[i].ljust(width/2) + array[i + 1].center(width) + array[i + 2].rjust(width/2)
 
-  if bottles == 1
-    word = 'bottle'
-  else
-    word = 'bottles'
-  end
-
-  puts "Take one down, pass it around, #{bottles} #{word} of beer on the wall
-  1"
-
-  break if bottles == 'no more'
+i += 3
 end
-
-puts 'No more bottles of beer on the wall, no more bottles of beer'
-puts 'Go to the store and buy some more, 3 bottles of beer on the wall'

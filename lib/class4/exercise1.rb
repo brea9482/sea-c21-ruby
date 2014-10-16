@@ -39,10 +39,18 @@
 words = []
 new_words = []
 
-puts "Enter some awesome words and I'll sort them for you!"
+puts "Type some words to be sorted alphabetically:"
 
-while gets != ""
-  words.push gets
+loop do
+answer = gets.chomp
+
+words.push(answer) if answer != ""
+
+break if answer == ""
+
 end
 
-puts words
+new_words = words.sort
+
+puts 'Sweet! Here they are in alphabetical order:'
+puts new_words.sort

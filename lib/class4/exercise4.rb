@@ -28,7 +28,8 @@
 
 # rubocop:disable MethodLength
 def old_school_roman_numeral(num)
-  num # change me
+  num
+
 end
 
 input = ARGV[0].to_i
