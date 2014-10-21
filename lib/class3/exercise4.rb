@@ -13,15 +13,14 @@ year = 1900
 
 while year <= 2000
   if (year % 4 == 0) && (year % 400 == 0)
-  puts "#{year}"
-  year += 1
+    puts "#{year}"
+    year += 1
   elsif (year % 4 == 0) && (year % 100 == 0)
-  year += 1
+    year += 1
   elsif (year % 4 == 0)
-  puts "#{year}"
-  year += 1
+    puts "#{year}"
+    year += 1
   else
-  year += 1
+    year += 1
   end
 end
-

@@ -33,7 +33,6 @@
 # TIP #2: Use `return` to preemptively exit the `ask` method.
 
 def ask(question)
-
   loop do
     puts question
 

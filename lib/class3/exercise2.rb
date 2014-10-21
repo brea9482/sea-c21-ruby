@@ -61,22 +61,17 @@ answer = gets.chomp
 
 loop do
   if answer == answer.downcase
-  puts 'Nana: HUH?! SPEAK UP, SWEETIE!'
-  answer = gets.chomp
+    puts 'Nana: HUH?! SPEAK UP, SWEETIE!'
+    answer = gets.chomp
   end
 
   if answer == answer.upcase && answer != 'BYE'
-  year = rand(21) + 1930
-  puts "Nana: NOT SINCE #{year}!"
-  answer = gets.chomp
+    year = rand(21) + 1930
+    puts "Nana: NOT SINCE #{year}!"
+    answer = gets.chomp
   end
 
-  break if answer =='BYE'
+  break if answer == 'BYE'
 end
 
 puts 'Nana: BYE SWEETIE!'
-
-
-
-
-

@@ -37,17 +37,13 @@
 #     ['cat', 'bird'].sort  #=> ['bird', 'cat']
 
 words = []
-new_words = []
 
-puts "Type some words to be sorted alphabetically:"
+puts 'Type some words to be sorted alphabetically:'
 
 loop do
-answer = gets.chomp
-
-words.push(answer) if answer != ""
-
-break if answer == ""
-
+  answer = gets.chomp
+  words.push(answer) if answer != ''
+  break if answer == ''
 end
 
 new_words = words.sort

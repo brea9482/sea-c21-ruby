@@ -18,15 +18,14 @@
 #
 # TIP #3: The width of each line is 50 characters.
 
-array = ['Can I Kick It?','A Tribe Called Quest','1991','Rump Shaker',\
-         'Wreckx-n-Effect','1992','Check Yo Self','Ice Cube','1993',\
-         'Regulate','Warren G & Nate Dogg','1994','I Got 5 On It','Luniz',\
-         '1995','Ready Or Not','The Fugees','1996']
-
+array = ['Can I Kick It?', 'A Tribe Called Quest', '1991', 'Rump Shaker',\
+         'Wreckx-n-Effect', '1992', 'Check Yo Self', 'Ice Cube', '1993',\
+         'Regulate', 'Warren G & Nate Dogg', '1994', 'I Got 5 On It', 'Luniz',\
+         '1995', 'Ready Or Not', 'The Fugees', '1996']
 
 i = 0
 
 while i < array.size
-puts array[i].ljust(20) + array[i + 1].ljust(20) + array[i + 2].rjust(10)
-i += 3
+  puts array[i].ljust(20) + array[i + 1].ljust(20) + array[i + 2].rjust(10)
+  i += 3
 end
