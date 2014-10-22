@@ -32,7 +32,15 @@
 require 'yaml'
 
 def records
-  ['change me']
+  [
+    'Incentivized methodologies',
+    'Seemless innovation',
+    'Corporate synergy',
+    'Scalable globalization',
+    'Monetized assets'
+  ]
 end
+
+# puts ruby data to a single string w/ yaml
 
 puts records.to_yaml
