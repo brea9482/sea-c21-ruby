@@ -1,24 +1,50 @@
-# an example of an array of arrays
+#!/usr/bin/env ruby
+#
+# 5 points
+#
+# Replace the `records` and `database` methods with your solutions from
+# exercises 1 and 2.
+#
+# Then write a program that saves the corporate buzzwords -- in YAML format --
+# to anyone's `lib/class5/database.yml` file and displays the result.
+#
+# So if Tim runs this program successfully:
+#
+#   $ ruby exercise3.rb
+#   Saved 5 records to /Users/tim/sea-c21-ruby/lib/class5/database.yml
+#
+# Then his database needs to contain the following YAML content:
+#
+#   $ cat database.yml
+#    ---
+#    - Incentivized methodologies
+#    - Seemless innovation
+#    - Corporate synergy
+#    - Scalable globalization
+#    - Monetized assets
+#
+# TIP: Read section 11.4 carefully.
 
-array = [
-  ['Can I Kick It?', 'A Tribe Called Quest', '1991'],
-  ['Rump Shaker','Wreckx-n-Effect', '1992'],
-  ['Check Yo Self', 'Ice Cube', '1993'],
-  ['Regulate', 'Warren G & Nate Dogg', '1994'],
-  ['I Got 5 On It', 'Luniz','1995'],
-  ['Ready Or Not', 'The Fugees', '1996']
-]
+require 'yaml'
 
-
-hits.each do |hit|
-  song, artist, year = hit
-
-  puts song.ljust(20) + artist.ljust(26) + year.ljust(4)
+def records
+  [
+    'Incentivized methodologies',
+    'Seemless innovation',
+    'Corporate synergy',
+    'Scalable globalization',
+    'Monetized assets'
+  ]
 end
 
+def database
+  File.dirname(File.absolute_path(__FILE__)) + '/database.yml'
+end
 
-# another way to do It
-
-song = hit[0]
-artis = hit [1]
-year = hit [2]
+def save
+  File.open database, 'w' do |f|
+    f.write records.to_yaml
+  end
+end
+save
+puts save

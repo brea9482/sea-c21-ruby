@@ -26,15 +26,23 @@
 require 'yaml'
 
 def database
-  '/replace/me'
+  File.dirname(File.absolute_path(__FILE__)) + '/database.yml'
 end
 
 def load
-  ['replace me']
+  buzzwords =
+    [
+      'Incentivized methodologies', 'Seemless innovation', 'Corporate synergy',
+      'Scalable globalization', 'Monetized assets'
+    ]
+  File.open database, 'w' do |f|
+    f.write buzzwords.to_yaml
+  end
+  buzzwords
 end
 
 def find(id)
-  id # fix me
+  load[id - 1]
 end
 
 input = ARGV[0].to_i
