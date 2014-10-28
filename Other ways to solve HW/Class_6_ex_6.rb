@@ -32,7 +32,15 @@ end
 def update(key, value)
   person = load
   person = person.merge(key.to_sym => value)
-  File.write(database, person.to_yaml)
+  # merge takes the new key value pair and overrides the orignal hash if
+  # there was something there before, and if not it adds a new key value pair
+  # to the end of the hash
+  # merge always makes a new hash
+  # the way I did it is that I made a mutation - and changed the orignal file
+
+  # takes the old hash and assigns it to a new variable then update the new
+  # hash and saves the new hash over the database
+  File.write(database, person.to_sym)
 end
 
 input1, input2 = ARGV

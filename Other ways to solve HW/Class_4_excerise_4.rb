@@ -1,12 +1,18 @@
 def old_school_roman_numeral(num)
   arabics_to_romans = [
-    [1000,'M']
-    [500,'D']
-    [100,'C']
-    [50,'L']
-    [10,'X']
-    [5,'V']
-    [1,'I']
+    [1000, 'M'],
+    [900, 'CM'],
+    [500, 'D'],
+    [400, 'CD'],
+    [100, 'C'],
+    [90, 'XC'],
+    [50, 'L'],
+    [40, 'XL'],
+    [10, 'X'],
+    [9, 'IX'],
+    [5, 'V'],
+    [4, 'IV'],
+    [1, 'I']
 ]
 
 answer = []
@@ -33,3 +39,5 @@ input = ARGV[0].to_i
 abort 'Usage: exercise4.rb [1-1000]' unless input.between?(1, 1000)
 
 puts old_school_roman_numeral(input)
+
+

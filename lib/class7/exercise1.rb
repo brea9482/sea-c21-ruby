@@ -14,7 +14,7 @@
 #
 #     Returns `amount` spaces plus the String. The default `amount` is 2.
 #
-#     'foo'.indent     #=> '  foo'
+#     'foo'.indent     #=> '  foo' # no argument provides, need default para.
 #     'foo'.indent(3)  #=> '   foo'
 #
 #   Integer#to_roman => String
@@ -47,28 +47,59 @@
 
 class Integer
   def hours_in_seconds
-    # replace me
+    self * 60 * 60
   end
 end
 
 class String
-  def indent(amount = 2)
-    amount # replace me
+  def indent(amount = 2) # default argument!!
+    ' ' * amount + self
   end
 end
 
 class Integer
   def to_roman
-    # replace me
+   arabics_to_romans = [
+    [1000, 'M'],
+    [900, 'CM'],
+    [500, 'D'],
+    [400, 'CD'],
+    [100, 'C'],
+    [90, 'XC'],
+    [50, 'L'],
+    [40, 'XL'],
+    [10, 'X'],
+    [9, 'IX'],
+    [5, 'V'],
+    [4, 'IV'],
+    [1, 'I']
+  ]
+
+  num = self
+  answer = []
+
+  arabics_to_romans.each do |arabic_to_roman|
+    arabic, roman = arabic_to_roman
+
+    quotient = num / arabic
+    next if quotient == 0
+
+  answer.push(roman * quotient)
+  num %= arabic
+
+  # the same as num = num % arabic
+  end
+
+  answer.join
   end
 end
 
 class Array
   def second
-    # replace me
+    self[1]
   end
 
   def third
-    # replace me
+    self[2]
   end
 end
