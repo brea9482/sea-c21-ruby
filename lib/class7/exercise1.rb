@@ -60,38 +60,35 @@ end
 class Integer
   # rubocop:disable MethodLength
   def to_roman
-   arabics_to_romans = [
-    [1000, 'M'],
-    [900, 'CM'],
-    [500, 'D'],
-    [400, 'CD'],
-    [100, 'C'],
-    [90, 'XC'],
-    [50, 'L'],
-    [40, 'XL'],
-    [10, 'X'],
-    [9, 'IX'],
-    [5, 'V'],
-    [4, 'IV'],
-    [1, 'I']
-  ]
+    arabics_to_romans = [
+      [1000, 'M'],
+      [900, 'CM'],
+      [500, 'D'],
+      [400, 'CD'],
+      [100, 'C'],
+      [90, 'XC'],
+      [50, 'L'],
+      [40, 'XL'],
+      [10, 'X'],
+      [9, 'IX'],
+      [5, 'V'],
+      [4, 'IV'],
+      [1, 'I']
+    ]
 
-  num = self
-  answer = []
+    num = self
+    answer = []
 
-  arabics_to_romans.each do |arabic_to_roman|
-    arabic, roman = arabic_to_roman
+    arabics_to_romans.each do |arabic_to_roman|
+      arabic, roman = arabic_to_roman
+      quotient = num / arabic
 
-    quotient = num / arabic
-    next if quotient == 0
+      next if quotient == 0
+      answer.push(roman * quotient)
+      num %= arabic
+    end
 
-  answer.push(roman * quotient)
-  num %= arabic
-
-  # the same as num = num % arabic
-  end
-
-  answer.join
+    answer.join
   end
 end
 

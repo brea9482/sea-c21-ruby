@@ -35,6 +35,36 @@
 # If you feel compelled to reassign `@fruit` outside the initialize method, you
 # should stop and rethink your approach.
 
+# QUESTION - I was able to answer the problems but wasn't exactly sure how the
+# class/methods were being iterated through.
+
 class OrangeTree
-  # replace me
+  def initialize(fruit = 50)
+    @fruit = fruit
+  end
+
+  def fruit
+    @fruit
+  end
+
+  def pick!(amount = 1)
+    if @fruit < amount
+      nil
+    else
+      @fruit -= amount
+    end
+  end
+
+  def ==(other)
+    return true if fruit == other
+    false
+  end
+
+  def pick(amount = 1)
+    if @fruit < amount
+      nil
+    else
+      @fruit - amount
+    end
+  end
 end

@@ -23,5 +23,20 @@
 #     orange_tree.fruit      #=> 44
 
 class OrangeTree
-  # replace me
+  def initialize
+    @fruit = 50
+  end
+
+  def fruit
+    @fruit
+  end
+
+  def pick!(amount = 1)
+    if @fruit < amount
+      nil
+    else
+      @fruit -= amount
+      # can ryan explain how this iterates?
+    end
+  end
 end
