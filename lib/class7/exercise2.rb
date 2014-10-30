@@ -24,4 +24,10 @@ class OrangeTree
   def fruit
     @fruit
   end
+  # attr_reader :fruit
 end
+
+# OrangeTree.fruit => returns 50
+
+# tree = OrangeTree.new
+# tree.fruit => returns 50

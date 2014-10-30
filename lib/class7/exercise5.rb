@@ -38,6 +38,7 @@
 # QUESTION - I was able to answer the problems but wasn't exactly sure how the
 # class/methods were being iterated through.
 
+# rubocop:disable TrivialAccessors
 class OrangeTree
   def initialize(fruit = 50)
     @fruit = fruit
