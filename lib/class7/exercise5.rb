@@ -35,13 +35,9 @@
 # If you feel compelled to reassign `@fruit` outside the initialize method, you
 # should stop and rethink your approach.
 
-<<<<<<< HEAD
 # QUESTION - I was able to answer the problems but wasn't exactly sure how the
 # class/methods were being iterated through.
 
-=======
-# rubocop:disable TrivialAccessors
->>>>>>> 691bec5fe4efe3f826a4d0aed144aaaef2daf426
 class OrangeTree
   def initialize(fruit = 50)
     @fruit = fruit
