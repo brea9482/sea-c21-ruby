@@ -67,5 +67,8 @@ class OrangeTree
     else
       @fruit - amount
     end
+      # return nil if fruit < amount
+      # OrangeTree.new(fruit - amount)
+
   end
 end

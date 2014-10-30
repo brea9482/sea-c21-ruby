@@ -22,22 +22,31 @@
 #     orange_tree.pick!(50)  #=> nil
 #     orange_tree.fruit      #=> 44
 
+#     orange_tree = variable which holds onto the data or box from the
+#     class, so the @friut value retains the information since it is stored
+#     in the orange_tree variable.
+
+#     the class call only uses the initialize function once, that is why
+#     the @fruit never resets to 50
+
 # rubocop:disable TrivialAccessors
 class OrangeTree
   def initialize
     @fruit = 50
   end
 
+    # def fruit=(fruit) is a writer method due to the equal sign
   def fruit
     @fruit
   end
 
-  def pick!(amount = 1)
+  def pick!(amount = 1) # check what happens if you change pick! to pick
     if @fruit < amount
       nil
     else
       @fruit -= amount
-      # can ryan explain how this iterates?
+      # return nil if fruit < amount
+      # @fruit -= amount
     end
   end
 end
