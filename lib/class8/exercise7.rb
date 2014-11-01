@@ -20,8 +20,16 @@
 #     Life is too short
 #     FTW
 
+# Sorry - couldn't figure out the right way to do this!
+
 class Array
   def each_without_yolo(&block)
-    block # fix me
+    self.each do |object|
+      if object == 'yolo' || object == 'YOLO'
+        puts 'Life is too short'
+      else
+        puts object
+      end
+    end
   end
 end

@@ -35,7 +35,7 @@ class OrangeTree
     @fruit = 50
   end
 
-    # def fruit=(fruit) is a writer method due to the equal sign
+  # def fruit=(fruit) is a writer method due to the equal sign
   def fruit
     @fruit
   end

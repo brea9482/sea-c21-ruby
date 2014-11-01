@@ -1,8 +1,8 @@
+puts 'give me something'
+answer = gets.chomp
 
-def greet(name, name_two = 'Dave')
-  "hello, #{name} and #{name_two}"
+if answer == 'answer' || answer == 'ANSWER'
+   puts answer
+ else
+  puts ''
 end
-
-puts greet('Patrick', 'Andrea')
-puts greet('Patrick')
-
