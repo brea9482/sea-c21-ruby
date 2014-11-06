@@ -34,7 +34,7 @@ def load
   File.open database, 'w' do |f|
     f.write buzzwords.to_yaml
 
-  # YAML.load_file(database)
+    # YAML.load_file(database)
   end
   buzzwords
 end
