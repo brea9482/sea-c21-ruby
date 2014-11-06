@@ -30,15 +30,7 @@ def database
 end
 
 def load
-  buzzwords =
-    [
-      'Incentivized methodologies', 'Seemless innovation', 'Corporate synergy',
-      'Scalable globalization', 'Monetized assets'
-    ]
-  File.open database, 'w' do |f|
-    f.write buzzwords.to_yaml
-  end
-  buzzwords
+  YAML.load_file(database)
 end
 
 def find(id)
